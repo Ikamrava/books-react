@@ -1,13 +1,24 @@
+.bookContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    
+    
+    
+}
+
 .image{
     width: 160px;
-    height: 250px;
-    
+    flex: 1;
     
 }
 
 
 .rank{
-   text-align: left;
+    text-align: left;
     color: black;
     padding-left: 10px;
     font-size: .8rem;
@@ -15,11 +26,10 @@
    
 }
 
-.bookContainer{
-    position: relative;
-}
+
 
 .title{
+    margin-top: 8px;
     text-align: left;
     padding-left: 10px;
     font-size: .8rem;
@@ -32,7 +42,16 @@
     font-weight: 900;
     
 }
+.description {
+    text-align: left;
+    padding-left: 10px;
+    font-size: .8rem;
+    font-weight: 900;
+    flex: 1;
 
-.links{
-    margin-top: 3rem;
+}
+
+.linksbtn{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;   
 }
