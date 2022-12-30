@@ -4,22 +4,43 @@ const context = createContext()
 
 function ContextProvider({children}){
     const [books,setBooks] = useState([])
+    const [lists,setLists] = useState([])
+    const [listName,setListName] = useState("paperback-advice")
+    const [loading,setloading] = useState(false)
 
-    useEffect(()=>{
-        fetch("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=gGZ0Wz0IkWAsnUKkIAUWCO9Cay255T8w")
+  useEffect(()=>{
+    fetch("https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=gGZ0Wz0IkWAsnUKkIAUWCO9Cay255T8w")
         .then(res=>res.json())
         .then(data=>{
-
-            setBooks(data.results.books)
+            setLists(data.results)
         })
-    },[])
-    console.log(books)
+  },[])
+
+
+    useEffect(()=>{
+        setloading(true)
+        fetch(`https://api.nytimes.com/svc/books/v3/lists/current/${listName}.json?api-key=gGZ0Wz0IkWAsnUKkIAUWCO9Cay255T8w`)
+        .then(res=>res.json())
+        .then(data=>{
+            setBooks(data.results.books)
+            setloading(false)
+        })
+    },[listName])
+    function changeCategory(selectedItem){
+        setListName(selectedItem)
+        console.log(listName)
+
+    }
 
     return (
-     <context.Provider value= {{books}}>
+     <context.Provider value= {{books,lists,changeCategory ,loading}}>
         {children}
      </context.Provider>
     )
 }
+
+
+
+
 
 export {ContextProvider,context}

@@ -4,16 +4,17 @@
     padding: 0;
 }
 
-header{
+.sidewrapper{
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    background-color: #D1F2FA;
+    grid-column: 1 / 2;
     
 }
 
-img{
+.iconimg{
     width: 50px;
 }
 
@@ -21,4 +22,28 @@ span{
     width: 10px;
     height: 2px;
     color: rgb(0, 0, 0);
+}
+
+.headerImgWrapper{
+background-image: url("../images/header.png");
+background-repeat: no-repeat;
+background-size:contain;
+max-width: 1280px;
+height: 200px;
+margin-bottom: 50px;
+display: flex;
+flex-direction: column;
+
+}
+
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: 100vh;
+    gap: 5px;
+    align-items: flex-start;
+    text-align: left;
+    
 }

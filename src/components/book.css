@@ -12,6 +12,7 @@
 
 .image{
     width: 160px;
+    height: 240px;
     flex: 1;
     
 }
@@ -26,28 +27,30 @@
    
 }
 
-
-
 .title{
+    font-weight: 900;
     margin-top: 8px;
-    text-align: left;
     padding-left: 10px;
     font-size: .8rem;
+    height: 20px;
+    overflow: hidden;
 }
 
 .author {
-    text-align: left;
+    
     padding-left: 10px;
     font-size: .8rem;
     font-weight: 900;
+    height: 20px;
+    overflow: hidden;
     
 }
 .description {
     text-align: left;
     padding-left: 10px;
     font-size: .8rem;
-    font-weight: 900;
-    flex: 1;
+    height: 80px;
+    overflow: scroll;
 
 }
 

@@ -7,6 +7,7 @@ import "./photos.css"
 
 function Photos() {
   const {books} = useContext(context)
+  const {loading} = useContext(context)
 
   const book = books.map(item=>{
     return(
@@ -15,7 +16,7 @@ function Photos() {
   })
   return (
     <div className='photos'>
-      {book}
+      {loading? <div>...  Loading</div>:book}
     </div>
   )
 }
