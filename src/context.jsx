@@ -7,7 +7,7 @@ function ContextProvider({children}){
     const [lists,setLists] = useState([])
     const [listName,setListName] = useState("hardcover-fiction")
     const [loading,setloading] = useState(false)
-    const [selected,setSelected] = useState ("")
+    const [selected,setSelected] = useState ([])
 
   useEffect(()=>{
     fetch("https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=gGZ0Wz0IkWAsnUKkIAUWCO9Cay255T8w")
@@ -25,6 +25,8 @@ function ContextProvider({children}){
         .then(data=>{
             setBooks(data.results.books)
             setloading(false)
+            
+            
         })
     },[listName])
 
@@ -32,7 +34,9 @@ function ContextProvider({children}){
         setListName(selectedItem)
         
     }
-   console.log(books)
+
+     console.log(selected)
+   
     function infoHandler (title){
        const chosenbook = books.filter(item=>item.title === title)
         setSelected(chosenbook)

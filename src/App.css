@@ -60,7 +60,9 @@ object-fit: cover;
   color: white;
 }
 
-
+.goback{
+  margin-top: 50px;
+}
 
 @media (max-width: 700px){
 
@@ -83,5 +85,6 @@ object-fit: cover;
   display: none;
   
 }
+
 
 }
