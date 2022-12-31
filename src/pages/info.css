@@ -1,0 +1,36 @@
+.purchaslinks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.infoWrapper{
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.headtitle{
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.bookTitle{
+    margin-bottom: 2rem;
+}
+
+.imagewrapper{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+}

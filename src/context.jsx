@@ -5,8 +5,9 @@ const context = createContext()
 function ContextProvider({children}){
     const [books,setBooks] = useState([])
     const [lists,setLists] = useState([])
-    const [listName,setListName] = useState("paperback-advice")
+    const [listName,setListName] = useState("hardcover-fiction")
     const [loading,setloading] = useState(false)
+    const [selected,setSelected] = useState ("")
 
   useEffect(()=>{
     fetch("https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=gGZ0Wz0IkWAsnUKkIAUWCO9Cay255T8w")
@@ -26,14 +27,20 @@ function ContextProvider({children}){
             setloading(false)
         })
     },[listName])
+
     function changeCategory(selectedItem){
         setListName(selectedItem)
-        console.log(listName)
-
+        
     }
+   console.log(books)
+    function infoHandler (title){
+       const chosenbook = books.filter(item=>item.title === title)
+        setSelected(chosenbook)
+    }
+     
 
     return (
-     <context.Provider value= {{books,lists,changeCategory ,loading}}>
+     <context.Provider value= {{books,lists,changeCategory ,loading,infoHandler,selected}}>
         {children}
      </context.Provider>
     )

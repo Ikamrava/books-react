@@ -20,8 +20,8 @@ export default function Sidebar() {
  
   function clickHandler(e){
     changeCategory(e.target.outerText)
-    const hamBtn = document.querySelector(".sidebarwrapper")
-    hamBtn.style.display = "none"
+    // const hamBtn = document.querySelector(".sidebarwrapper")
+    // hamBtn.style.display = "none"
   }
 
   const allList = lists.map(item=>{
@@ -33,7 +33,7 @@ export default function Sidebar() {
   return (
     <div className='sidebarwrapper'>
      <div className='sidebar'>
-      <h3 className='cat'>Categories</h3>
+      <h3 className='cat'>Category</h3>
         {allList}
        </div>
      

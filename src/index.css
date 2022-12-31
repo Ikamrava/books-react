@@ -1,7 +1,7 @@
 
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 *{
@@ -34,7 +34,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #e5d8d8;
   cursor: pointer;
   transition: border-color 0.25s;
 }
