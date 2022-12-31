@@ -42,8 +42,30 @@ flex-direction: column;
     flex-direction: column;
     overflow: scroll;
     height: 100vh;
-    gap: 5px;
     align-items: flex-start;
     text-align: left;
+    font-size: .9rem;
+}
+
+.cat{
+    background-color: #488189;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.z-index{
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    display: block;
+        
+}
+
+@media (max-width: 700px){
+    .sidebarwrapper {
+    display: none;
     
+        }
 }

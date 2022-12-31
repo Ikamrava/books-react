@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import "./header.css"
+import "./sidebar.css"
 import img from "../images/bookicon.png"
 import List from "./List"
 import { context } from '../context'
@@ -20,6 +20,8 @@ export default function Sidebar() {
  
   function clickHandler(e){
     changeCategory(e.target.outerText)
+    const hamBtn = document.querySelector(".sidebarwrapper")
+    hamBtn.style.display = "none"
   }
 
   const allList = lists.map(item=>{
@@ -29,8 +31,9 @@ export default function Sidebar() {
   })
 
   return (
-    <div>
+    <div className='sidebarwrapper'>
      <div className='sidebar'>
+      <h3 className='cat'>Categories</h3>
         {allList}
        </div>
      
