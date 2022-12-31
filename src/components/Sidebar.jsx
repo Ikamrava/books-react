@@ -20,8 +20,10 @@ export default function Sidebar() {
  
   function clickHandler(e){
     changeCategory(e.target.outerText)
-    // const hamBtn = document.querySelector(".sidebarwrapper")
-    // hamBtn.style.display = "none"
+    if(window.innerWidth<700){
+      const hamBtn = document.querySelector(".sidebarwrapper")
+      hamBtn.style.display = "none"
+    }
   }
 
   const allList = lists.map(item=>{
