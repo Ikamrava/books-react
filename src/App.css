@@ -79,4 +79,9 @@ object-fit: cover;
   display: block;
 }
 
+.topImage{
+  display: none;
+  
+}
+
 }
