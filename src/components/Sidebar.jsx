@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./sidebar.css"
-import img from "../images/bookicon.png"
 import List from "./List"
 import { context } from '../context'
 import { nanoid } from 'nanoid'
