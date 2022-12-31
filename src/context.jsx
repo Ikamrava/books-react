@@ -35,7 +35,6 @@ function ContextProvider({children}){
         
     }
 
-     console.log(selected)
    
     function infoHandler (title){
        const chosenbook = books.filter(item=>item.title === title)
