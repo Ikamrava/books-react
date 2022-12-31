@@ -8,7 +8,9 @@ function Book({book,click}) {
 
   return (
     <div className = "bookContainer">
-      <a href={book.amazon_product_url} target="_blank"><img className='image' src={book.book_image}/></a>
+      {/* href={book.amazon_product_url}  */}
+      
+      <Link to="/info" onClick={click}><img className='image' src={book.book_image}/></Link>
       <p className='title'>{book.title}</p>
       <p className='author'>Author: {book.author}</p>
       <p className='description'>{book.description}</p>
