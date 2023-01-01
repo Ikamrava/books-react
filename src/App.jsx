@@ -25,7 +25,7 @@ function App() {
        <div >
         <header className='wrapper'>
           <img className = "topImage" src={header}></img>
-          <h2 className='toptext'>Top Rated Books</h2>
+          <h2 className='toptext'>Top Sellers Books</h2>
           <div className='hamburger' onClick={clickHandler}>
             <span className='line'></span>
             <span className='line'></span>
