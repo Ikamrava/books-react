@@ -18,7 +18,7 @@ function Info() {
 
     const purchaseLinks = selected[0].buy_links.map(item=>{
         return (
-          <a key = {nanoid()}href={item.url}>{item.name}</a>
+          <a key = {nanoid()}href={item.url} target="_blank" >{item.name}</a>
         )
       })
 

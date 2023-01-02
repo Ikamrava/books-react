@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar"
 import Info from './pages/Info'
 import Photos from './pages/Photos'
 import header from './images/header.png'
+import headermobile from './images/header-mobile.png'
 import {BrowserRouter as Router,Route,Link, Routes} from "react-router-dom";
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
        <div >
         <header className='wrapper'>
           <img className = "topImage" src={header}></img>
-          <h2 className='toptext'>Top Rated Books</h2>
+          <img className = "topImage-mobile" src={headermobile}></img>
+          <h2 className='toptext'>Best Sellers Books</h2>
           <div className='hamburger' onClick={clickHandler}>
             <span className='line'></span>
             <span className='line'></span>

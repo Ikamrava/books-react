@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 1380px;
   margin: 0 auto;
   text-align: center;
   padding: 0;
@@ -19,8 +19,11 @@
 }
 
 header{
+max-width: 1380px;
 margin-bottom: 10px;
 object-fit: cover;
+margin-top: 10px;
+
 
 }
 .hamburger{
@@ -62,6 +65,16 @@ object-fit: cover;
 
 .goback{
   margin-top: 50px;
+  max-width: 1380px;
+  object-fit: cover;
+}
+
+.topImage{
+  border-radius: 20px;
+  width: 100%;
+}
+.topImage-mobile{
+  display: none;
 }
 
 @media (max-width: 700px){
@@ -82,14 +95,22 @@ object-fit: cover;
 
 .topImage{
   display: none;
-  
+}
+
+.topImage-mobile {
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  margin: 20px 5px;
 }
 
 .toptext {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  color: rgb(4, 4, 4);
+  top:  30px;
+  right: 0px;
+  color: rgb(245, 242, 242);
+  text-align: left;
 }
 
 }
